@@ -37,7 +37,9 @@ const App = () => {
             </p>
             <div className='text-2xl flex justify-center gap-5 text-gray-600'>
               <BsTwitter className='hover:scale-105 cursor-pointer'/>
-              <BsLinkedin className='hover:scale-105 cursor-pointer'/>
+              <a href="https://www.linkedin.com/in/nikhil-menon-17629122a/">
+                <BsLinkedin className='hover:scale-105 cursor-pointer'/>
+              </a>
               <BsGithub className='hover:scale-105 cursor-pointer'/>  
             </div>
             <div >
