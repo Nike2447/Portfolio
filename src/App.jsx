@@ -163,7 +163,7 @@ const App = () => {
               Projects
             </h3>
             <p className="text-md py-5 leading-6 px-10 font-poppins text-gray-600">
-              This section includes the images of projects I have completed
+              This section includes the images of completed projects.
             </p>
             <ol className="font-poppins text-lg">
               <li className="underline-offset-1">1. Medical Portfolio</li>
