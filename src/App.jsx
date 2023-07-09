@@ -3,6 +3,8 @@ import { useRef } from "react";
 
 import { BsFillFileTextFill, BsGit, BsArrowDownShort } from "react-icons/bs";
 import { BsTwitter, BsLinkedin, BsGithub } from "react-icons/bs";
+import { MdHomeRepairService } from "react-icons/md";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import {
   design,
   code,
@@ -30,62 +32,90 @@ const App = () => {
     <div>
       <main className="bg-stone-100 px-10 md:px-20 lg:px-40">
         <section className="min-h-screen">
-          <nav className="py-10 mb-5 flex justify-between">
-            <h1 className="text-xl font-adelia">DevelopedbyNike</h1>
-            <ul className=" flex items-center">
-              <li className="flex items-center ">
-                <li
-                  onClick={() => scrolltosection(Projects)}
-                  className="flex text-lg px-1 py-2 font-poppins cursor-pointer hover:scale-105 mr-10"
-                >
-                  Projects
-                  <BsArrowDownShort className="text-2xl" />
-                </li>
+          <nav className="fixed top-0 left-0 w-screen h-16 m-0 flex flex-row bg-gray-900 text-white shadow-lg justify-between">
+            <h1 className=" flex text-xl font-adelia pl-2 items-center justify-center">
+              DevelopedbyNike
+            </h1>
+            <ul className=" flex items-center pr-10">
+              <li className="flex">
+                <div className="group">
+                  <li
+                    onClick={() => scrolltosection(Projects)}
+                    className="flex text-lg px-1 py-2 font-poppins cursor-pointer mr-10 group"
+                  >
+                    <span
+                      className="bg-gradient-to-r from-cyan-600 to-teal-600 flex absolute mt-14 items-center w-auto  p-2 mr-2 min-w-max rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 
+                      scale-0 origin-top group-hover:scale-100"
+                    >
+                      Projects
+                    </span>
+                    <AiOutlineFundProjectionScreen
+                      className=" p-1 h-10 w-10 ml-2 bg-gray-800 text-white hover:bg-white hover:text-gray-800
+        rounded-3xl hover:rounded-xl transition-all duration-200"
+                    />
+                  </li>
+                </div>
+                <div className="group">
+                  <li
+                    onClick={() => scrolltosection(services)}
+                    className="flex text-lg px-1 py-2 font-poppins cursor-pointer hover:scale-105 mr-10"
+                  >
+                    <MdHomeRepairService
+                      className=" p-1 h-10 w-10 ml-2 bg-gray-800 text-white hover:bg-white hover:text-gray-800
+      rounded-3xl hover:rounded-xl transition-all duration-200"
+                    />
+                    <span
+                      className="bg-gradient-to-r from-cyan-600 to-teal-600 flex absolute mt-14 items-center w-auto  p-2 mr-2 min-w-max rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 
+      scale-0 origin-top group-hover:scale-100"
+                    >
+                      Services
+                    </span>
+                  </li>
+                </div>
+              </li>
+              <div className="group">
+                <li className="flex items-center group mr-3">
+                  <BsFillFileTextFill
+                    className="cursor-pointer p-1 h-8 w-8 ml-2 bg-gray-800 text-white hover:bg-white hover:text-gray-800
+      rounded-3xl hover:rounded-xl transition-all duration-200"
+                  />
 
-                <li
-                  onClick={() => scrolltosection(services)}
-                  className="flex text-lg px-1 py-2 font-poppins cursor-pointer hover:scale-105 mr-10"
-                >
-                  Services
-                  <BsArrowDownShort className="text-2xl" />
+                  <a
+                    className="bg-gradient-to-r from-cyan-600 to-teal-600 flex absolute mt-[108px] items-center w-auto  p-2 mr-[10px] min-w-max rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 
+                    scale-0 origin-top group-hover:scale-100"
+                    href="https://github.com/Nike2447"
+                  >
+                    Resume
+                  </a>
                 </li>
-              </li>
-              <li>
-                <BsFillFileTextFill className="text-2xl" />
-              </li>
-              <li>
-                <a
-                  className="bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-4 py-2 rounded-md ml-2 font-poppins "
-                  href="https://github.com/Nike2447"
-                >
-                  Resume
-                </a>
-              </li>
+              </div>
             </ul>
           </nav>
-          <div className="text-center p-10">
-            <h2 className="text-4xl py-4 text-teal-600 font-semibold md:text-6xl">
-              Nikhil Menon
-            </h2>
-            <h3 className="text-xl py-4 md:text-3xl">Student Developer</h3>
-            <p className="text-md py-5 leading-10 text-gray-700 md:text-xl max-w-xl mx-auto">
-              Introducing a dedicated and aspiring student developer, eager to
-              make a meaningful impact on the programming community through
-              passion, innovation, and a commitment to continuous learning.
-            </p>
-            <div className="text-2xl flex justify-center gap-5 text-gray-600">
-              <BsTwitter className="hover:scale-105 cursor-pointer" />
-              <a href="https://www.linkedin.com/in/nikhil-menon-17629122a/">
-                <BsLinkedin className="hover:scale-105 cursor-pointer" />
-              </a>
-              <BsGithub className="hover:scale-105 cursor-pointer" />
-            </div>
-            <div>
-              <img
-                className="relative rounded-full h-80 w-80 mx-auto mt-10"
-                src="../Avatar.png"
-                alt="Nikhil"
-              />
+          <div style={{ paddingTop: "4rem" }}>
+            <div className="text-center p-10">
+              <h2 className="text-4xl py-4 text-teal-600 font-semibold md:text-6xl">
+                Nikhil Menon
+              </h2>
+              <h3 className="text-xl py-4 md:text-3xl">Student Developer</h3>
+              <p className="text-md py-5 leading-10 text-gray-700 md:text-xl max-w-xl mx-auto">
+                Introducing a dedicated and aspiring student developer, eager to
+                make a meaningful impact on the programming community through
+                passion, innovation, and a commitment to continuous learning.
+              </p>
+              <div className="text-2xl flex justify-center gap-5 text-gray-600">
+                <BsTwitter className="hover:scale-105 cursor-pointer" />
+                <a href="https://www.linkedin.com/in/nikhil-menon-17629122a/">
+                  <BsLinkedin className="hover:scale-105 cursor-pointer" />
+                </a>
+                <BsGithub className="hover:scale-105 cursor-pointer" />
+              </div>
+              <div>
+                <img
+                  className="relative rounded-full h-80 w-80 mx-auto mt-10 "
+                  src="../Avatar.png"
+                  alt="Nikhil"
+                />
+              </div>
             </div>
           </div>
         </section>
